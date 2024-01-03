@@ -29,18 +29,15 @@ public class B2798 {
 		
 		for(int i=0;i<N;i++)
 		{
-			for(int j=0;j<N;j++)
+			for(int j=0;j<N-i;j++)
 			{
-				for(int k=0;k<N;k++)
+				for(int k=0;k<N-j;k++)
 				{
-					if(arr[i]!=arr[j] && arr[j]!=arr[k] && arr[k]!=arr[i])
+					if(arr[i]+arr[j]+arr[k]<=M)
 					{
-						if(arr[i]+arr[j]+arr[k]<=M)
-						{
-							total[k]=arr[i]+arr[j]+arr[k];
-							if(maxTotal<total[k])
-								maxTotal=total[k];
-						}
+						total[k]=arr[i]+arr[j]+arr[k];
+						if(maxTotal<total[k])
+							maxTotal=total[k];
 					}
 				}
 			}

@@ -17,7 +17,7 @@ public class B2798 {
 		int N=Integer.parseInt(st.nextToken());
 		int M=Integer.parseInt(st.nextToken());
 		int arr[]=new int[N];
-		int total[]=new int[1000000];
+		int total[]=new int[10000];
 		int maxTotal=0;
 		
 		st=new StringTokenizer(br.readLine());
@@ -33,20 +33,18 @@ public class B2798 {
 			{
 				for(int k=0;k<N;k++)
 				{
-					if(arr[i]!=arr[j] && arr[j]!=arr[k] && arr[k]!=arr[i])
+					if(arr[i]+arr[j]+arr[k]<=M)
 					{
-						if(arr[i]+arr[j]+arr[k]<=M)
-						{
-							total[k]=arr[i]+arr[j]+arr[k];
-							if(maxTotal<total[k])
-								maxTotal=total[k];
-						}
+						total[i]=arr[i]+arr[j]+arr[k];
+						if(maxTotal<total[i])
+							maxTotal=total[i];
 					}
 				}
 			}
 		}
 		
 		System.out.println(maxTotal);
+		
 		
 	}
 
