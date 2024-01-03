@@ -15,11 +15,11 @@ public class B2439 {
 		{
 			for(int j=0;j<N-i-1;j++)
 			{
-				System.out.print("A");
+				System.out.print(" ");
 			}
 			for(int k=0;k<i;k++)
 			{
-				System.out.print("B");
+				System.out.print("*");
 			}
 			System.out.println("*");
 		}

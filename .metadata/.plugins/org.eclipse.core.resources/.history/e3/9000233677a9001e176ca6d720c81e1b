@@ -1,0 +1,47 @@
+package baekjoon;
+
+import java.util.Scanner;
+
+public class B2745 {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		
+		int B = sc.nextInt();
+		String N = sc.nextLine();
+		char arr[]=new char[36];
+		int decimal=0;
+		
+		
+		//배열에 진법 수 모아놓기
+		for(int i=0;i<arr.length;i++)
+		{
+			if(i>=0 && i<=9)
+			{
+				int num=i+48;
+				char numb=(char)num;
+				arr[i]=numb;
+			}
+			else if(i>=10 && i<=35)
+			{
+				int num=i+55;
+				char alpha=(char)num;
+				arr[i]=alpha;
+			}
+		}
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			if(B==i)
+			{
+				decimal=Integer.parseInt(N,10);
+			}
+		}
+		
+		System.out.println(decimal);
+		
+	}
+
+}
