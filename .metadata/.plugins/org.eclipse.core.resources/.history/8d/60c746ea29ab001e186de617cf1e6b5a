@@ -33,6 +33,8 @@ public class B2745 {
 			{
 				al[i]=(int)alpha[i]-55;
 			}
+			
+			System.out.println(al[i]);
 		}
 		
 		
@@ -49,10 +51,14 @@ public class B2745 {
 			//10의 자리수 이상일때
 			else
 			{
-				if(al[i]!=0)
-					total+=al[i]*(Math.pow(B, i));
-				else
-					total+=0;
+				//10의 자리면 B^1 100의 자리면 B^2 ... 반복시키기위한 반복문
+				for(int j=1;j<N.length()-1;j++)
+				{
+					if(al[j]!=0)
+						total+=al[j]*(Math.pow(B, j));
+					else
+						total+=0;
+				}
 			}
 		}
 		

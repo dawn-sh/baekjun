@@ -33,6 +33,8 @@ public class B2745 {
 			{
 				al[i]=(int)alpha[i]-55;
 			}
+			
+			System.out.println(al[i]);
 		}
 		
 		
