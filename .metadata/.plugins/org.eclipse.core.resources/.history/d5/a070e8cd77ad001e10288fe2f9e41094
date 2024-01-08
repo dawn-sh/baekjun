@@ -1,0 +1,55 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.StringTokenizer;
+
+public class B10828 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		
+		int commandCnt=sc.nextInt();
+		Stack<Integer> stack=new Stack<Integer>();
+		
+		for(int i=0;i<commandCnt;i++)
+		{
+			String command=sc.next();
+			
+			if(command.equals("push"))
+			{
+				int su=sc.nextInt();
+				
+				stack.push(su);
+			}
+			else if(command.equals("top"))
+			{
+				if(stack.size()!=0)
+					System.out.println(stack.peek());
+				else
+					System.out.println(-1);
+			}
+			else if(command.equals("size"))
+				System.out.println(stack.size());
+			else if(command.equals("empty"))
+			{
+				if(stack.isEmpty())
+					System.out.println(-1);
+				else
+					System.out.println(0);
+			}
+			else if(command.equals("pop"))
+				System.out.println(stack.pop());
+		}
+		
+	}
+
+}

@@ -1,0 +1,53 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.Console;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class B10828 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		
+		int commandCnt=Integer.parseInt(st.nextToken());
+		int stack[]=new int[commandCnt];
+		
+		st=new StringTokenizer(br.readLine());
+		
+		for(int i=0;i<commandCnt;i++)
+		{
+			String command=st.nextToken();
+			
+			if(command.equals("push"))
+			{
+				int su=Integer.parseInt(st.nextToken());
+				stack[i]=su;
+				
+				bw.write(stack[i]);
+			}
+			else if(command.equals("top"))
+			{
+				if(stack.length!=0)
+					bw.write(stack[stack.length-1]);
+				else
+					bw.write(-1);
+			}
+			
+			st=new StringTokenizer(br.readLine());
+		}
+		
+		bw.flush();
+		bw.close();
+		br.close();
+	}
+
+}
