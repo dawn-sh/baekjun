@@ -17,12 +17,12 @@ public class B10828 {
 		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		
-		int commandCnt=Integer.parseInt(br.readLine().trim());
+		int commandCnt=Integer.parseInt(br.readLine());
 		Stack<Integer> stack=new Stack<Integer>();
 		
 		for(int i=0;i<commandCnt;i++)
 		{	
-			StringTokenizer st=new StringTokenizer(br.readLine().trim());
+			StringTokenizer st=new StringTokenizer(br.readLine());
 			
 			String command=st.nextToken();
 			

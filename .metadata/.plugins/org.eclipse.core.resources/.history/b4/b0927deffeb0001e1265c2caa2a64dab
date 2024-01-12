@@ -1,0 +1,66 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class B2609 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		
+		int first_num=Integer.parseInt(st.nextToken());
+		int second_num=Integer.parseInt(st.nextToken());
+		
+		int first_arr[]=new int[10000];
+		int second_arr[]=new int[10000];
+		
+		int maxNum=0;
+		
+		for(int i=1;i<first_num+1;i++)
+		{
+			if(first_num%i==0)
+			{
+				first_arr[i-1]=i;
+			}
+		}
+		
+		for(int i=1;i<second_num+1;i++)
+		{
+			if(second_num%i==0)
+			{
+				second_arr[i-1]=i;
+			}
+		}
+		
+		for(int i=0;i<10000;i++)
+		{
+			for(int j=0;j<10000;j++)
+			{
+				if(first_arr[i]==second_arr[j] && first_arr[i]!=0 && second_arr[i]!=0)
+					maxNum=first_arr[i];
+			}
+		}
+		
+		System.out.println(maxNum);
+		
+		int first_leastNum=first_num%maxNum;
+		int second_leastNum=second_num%maxNum;
+		
+		if(first_leastNum!=0 && second_leastNum!=0)
+			System.out.println(maxNum*first_leastNum*second_leastNum);
+		
+		
+		
+		
+	}
+
+}
