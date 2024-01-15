@@ -1,0 +1,37 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class B1929 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		
+		int first_num=Integer.parseInt(st.nextToken());
+		int second_num=Integer.parseInt(st.nextToken());
+		
+		int arr[]=new int[second_num-first_num+1];
+		
+		for(int i=first_num;i<=second_num;i++)
+		{
+			if(first_num==0 || first_num==1)
+				continue;
+			
+			//first_num도 같이 증가
+			for(int j=2;j<=first_num;j++)
+			{
+				if(i%j==0)
+					continue;
+				else
+					System.out.println(arr[i-first_num]!=0);
+			}
+		}
+	}
+
+}
