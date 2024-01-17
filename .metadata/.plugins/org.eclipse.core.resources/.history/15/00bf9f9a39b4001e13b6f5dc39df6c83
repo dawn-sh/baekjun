@@ -1,0 +1,30 @@
+package baekjoon;
+
+import java.util.Scanner;
+
+public class B9095 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// https://lotuslee.tistory.com/43 풀이방식 참고
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int testCnt=sc.nextInt();
+		
+		int totalArr[]=new int[11];
+		
+		totalArr[0]=0;
+		totalArr[1]=1;
+		totalArr[2]=2;
+		totalArr[3]=4;
+		
+		for(int i=0;i<testCnt;i++)
+		{
+			for(int j=4;)
+		}
+		
+	}
+
+}
