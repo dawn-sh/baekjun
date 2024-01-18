@@ -1,0 +1,33 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class B2579 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw=new BufferedWriter(new OutputStreamWriter(System.out));
+		
+		int stair_cnt=Integer.parseInt(br.readLine());
+		int stair_score[]=new int[stair_cnt];
+		
+		for(int i=0;i<stair_cnt;i++)
+		{
+			StringTokenizer st=new StringTokenizer(br.readLine());
+			int score=Integer.parseInt(st.nextToken());
+			
+			stair_score[i]=score;
+			
+			System.out.println(stair_score[i]);
+		}
+		
+	}
+
+}
