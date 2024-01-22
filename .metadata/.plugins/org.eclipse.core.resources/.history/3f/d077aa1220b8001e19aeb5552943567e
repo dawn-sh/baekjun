@@ -38,7 +38,7 @@ public class B2579 {
 
 		for(int i=4;i<=total;i++)
 		{
-			score[i]=Math.max(score[i-3] + stair[i-1], score[i-2]) + stair[i];
+			score[i]=Math.max(score[i-3] + stair[i-1], score[i-2])+stair[i];
 		}
 			
 		bw.write(Integer.toString(score[total]));

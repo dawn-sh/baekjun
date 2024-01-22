@@ -10,8 +10,6 @@ public class B14501 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
 
-		//https://j3sung.tistory.com/842 참고
-		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		
 		int cnt=Integer.parseInt(br.readLine());
@@ -28,8 +26,6 @@ public class B14501 {
 		}
 		
 		int totalpay[]=new int[cnt+1];
-		
-		//여기 이후로는 답지를 봤습니다.
 		
 		for(int i=0;i<cnt;i++)
 		{
