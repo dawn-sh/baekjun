@@ -1,0 +1,63 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class B1476 {
+
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		StringTokenizer st=new StringTokenizer(br.readLine());
+		
+		int E=Integer.parseInt(br.readLine());
+		int S=Integer.parseInt(br.readLine());
+		int M=Integer.parseInt(br.readLine());
+		
+		int earth[]=new int[16];
+		int sun[]=new int[29];
+		int moon[]=new int[20];
+		int year=0;
+		
+		for(int i=1;i<=15;i++)
+		{
+			earth[i]=i;
+		}
+		
+		for(int i=1;i<=28;i++)
+		{
+			sun[i]=i;
+		}
+		
+		for(int i=1;i<=19;i++)
+		{
+			moon[i]=i;
+		}
+		
+		
+		for(int i=1;i<=28;i++)
+		{
+			st=new StringTokenizer(br.readLine());
+			if(i>15)
+			{
+				earth[1]=1;
+			}
+			if(i>28)
+			{
+				sun[1]=1;
+			}
+			if(i>19)
+			{
+				moon[1]=1;
+			}
+			
+			year++;
+		}
+		
+		System.out.println(year);
+		
+	}
+}

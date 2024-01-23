@@ -1,0 +1,28 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class B1476 {
+
+	public static void main(String[] args) {
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		int earth[]=new int[16];
+		int sun[]=new int[29];
+		int moon[]=new int[20];
+		
+		for(int i=1;i<=28;i++)
+		{
+			if(earth[i]>=1 && earth[i]<=15)
+				earth[i]=i;
+			if(sun[i]>=1 && sun[i]<=28)
+				sun[i]=i;
+			if(moon[i]>=1 && moon[i]<=19)
+				moon[i]=i;
+		}
+		
+		System.out.println(earth+" "+sun+" "+moon);
+	}
+}

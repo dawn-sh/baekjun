@@ -1,0 +1,35 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class B1476 {
+
+	public static void main(String[] args) {
+		
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+		
+		int earth[]=new int[16];
+		int sun[]=new int[29];
+		int moon[]=new int[20];
+		int year=0;
+		
+		for(int i=1;i<=15;i++)
+		{
+			earth[i]=i;
+			System.out.println(earth[i]);
+		}
+		
+		for(int i=1;i<=28;i++)
+		{
+			sun[i]=i;
+			System.out.println(sun[i]);
+		}
+		
+		for(int i=1;i<=19;i++)
+		{
+			moon[i]=i;
+			System.out.println(moon[i]);
+		}
+	}
+}
