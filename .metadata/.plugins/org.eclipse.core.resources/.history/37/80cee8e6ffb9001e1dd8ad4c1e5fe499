@@ -1,0 +1,72 @@
+package baekjoon;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+public class B15649 {
+
+	public static int [] arr;
+	public static boolean[] visit;
+	
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		/* 내풀이
+		Scanner sc=new Scanner(System.in);
+		
+		int n=sc.nextInt();
+		int m=sc.nextInt();
+		
+		for(int i=1;i<=n;i++)
+		{
+			for(int j=1;j<=m;j++)
+			{
+				System.out.println(i+" "+j);
+			}
+		}
+		*/
+		
+		//https://infodon.tistory.com/55 참고
+		//너무 어려워서 풀다가 포기하고 설명이 잘된 정리글을 찾다가 찾은 tistory입니다.
+		//진행과정을 세분화해서 설명해주는 블로그라 조금은? 더 이해할 수 있던 것 같아 주소 남깁니다
+		
+		//진행과정을 하나씩 코드로 써가면서 이해하니까 조금 더 수월했어요! 말로는 설명하기 힘들듯;;
+		
+		//https://st-lab.tistory.com/114 이 블로그와 병합해서 풀었으니 위 url에서 개념 잡고 섞어서 풀어보면 좋을듯 싶습니다
+		
+		
+		Scanner sc=new Scanner(System.in);
+		
+		int N=sc.nextInt();
+		int M=sc.nextInt();
+		
+		arr=new int[M];
+		visit=new boolean[N];
+		dfs(N,M,0);
+	}
+	
+	public static void dfs(int N,int M,int depth) {
+		
+		if(depth==M)
+		{
+			for(int t:arr)
+			{
+				System.out.print(t+ " ");
+			}
+			System.out.println();
+			return;
+		}
+		
+		for(int i=0;i<N;i++)
+		{
+			if(!visit[i])
+			{
+				visit[i]=true;
+				arr[depth]=i+1;
+				dfs(N,M,depth+1);
+				visit[i]=false;
+			}
+		}
+	}
+
+}
